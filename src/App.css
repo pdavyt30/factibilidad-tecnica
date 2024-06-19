@@ -2,37 +2,47 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+  display: inline;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
+nav ul li a {
+  text-decoration: none;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin: 500px 100px; /* Espacio entre secciones */
+  padding: 20px;
+  background-color: #f0f0f0; /* Color de fondo */
+}
+
+/* Estilo para el menú de navegación */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el menú esté en la parte superior */
+  transition: background-color 0.3s; /* Agrega una transición suave */
+}
+
+/* Estilo para la barra de navegación cuando se ha desplazado hacia abajo */
+nav.scrolled {
+  background-color: transparent; /* Cambia el color de fondo según sea necesario */
+}
+
+
+/* Estilo para el contenido debajo del menú */
+.content {
+  margin-top: 50px; /* Ajusta según la altura del menú */
 }
